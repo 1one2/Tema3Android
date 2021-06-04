@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:background="@drawable/cell_background">
+
+    <TextView
+        android:id="@+id/cellTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="5dp"
+        android:textSize="27sp"
+        android:text="Title"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/cellAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cellTitle"
+        android:text="Author"
+        android:textSize="27sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/cellDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cellAuthor"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Description"
+        android:textSize="27sp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textColor="@color/white"/>
+    <Button
+        android:id="@+id/cellButton"
+        android:text="Delete"
+        android:textSize="20sp"
+        android:backgroundTint="@color/purple_700"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cellDescription"
+        android:background="@drawable/cell_background"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
